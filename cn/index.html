@@ -67,7 +67,7 @@
 <meta property="og:image" content="https://yoursite.com/images/apple-store-badge.svg">
 <meta property="og:image" content="https://yoursite.com/images/google-play-badge.png">
 <meta property="og:image" content="https://yoursite.com/images/interface_cn.png">
-<meta property="og:updated_time" content="2020-04-19T19:56:45.788Z">
+<meta property="og:updated_time" content="2020-04-20T18:30:38.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="金银币测试">
 <meta name="twitter:description" content="这是啥?金银币测试 是一款免费的应用程序，可以用来检测假的金银币。用户只需要用一个坚硬的物体（例如另一枚硬币，钥匙，等）轻轻的敲击待测硬币，就可以知道检测结果。该应用仅限于：  检测圆形无孔的金银币。 检测金银币中的金银含量：该应用无法区别真品和一枚金银含量与之相近的赝品。 金币含金量至少为7%，银币含银量至少为20%；当含金量&amp;lt;20%或含银量&amp;lt;50%时，结果可能不准确。  如何用?">
@@ -244,21 +244,40 @@
 <li>检测金银币中的金银含量：该应用无法区别真品和一枚金银含量与之相近的赝品。</li>
 <li>金币含金量至少为7%，银币含银量至少为20%；当含金量&lt;20%或含银量&lt;50%时，结果可能不准确。</li>
 </ul>
-<h1 id="如何用"><a href="#如何用" class="headerlink" title="如何用?"></a>如何用?</h1><h2 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h2><img src="/images/interface_cn.png" width="40%" height="40%">
+<h1 id="如何用"><a href="#如何用" class="headerlink" title="如何用?"></a>如何用?</h1><h2 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h2><img src="/images/interface_cn.png" width="80%" height="80%">
 
-<h3 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h3><ul>
+<h3 id="测试界面"><a href="#测试界面" class="headerlink" title="测试界面"></a>测试界面</h3><h4 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h4><ul>
 <li>含量（%）: 金银币的金含量或银含量。</li>
 <li>重量（克）: 金银币的重量（克），通常可用名义重量代替。</li>
 <li>直径（毫米）: 金银币的直径（毫米），通常使用名义直径。</li>
 </ul>
-<h3 id="用户操作"><a href="#用户操作" class="headerlink" title="用户操作"></a>用户操作</h3><ul>
+<h4 id="用户操作"><a href="#用户操作" class="headerlink" title="用户操作"></a>用户操作</h4><ul>
 <li>检测: 开始一个新的测试。</li>
 <li>重播: 重复上一次的测试。</li>
 </ul>
-<h3 id="输出信息"><a href="#输出信息" class="headerlink" title="输出信息"></a>输出信息</h3><ul>
+<h4 id="输出信息"><a href="#输出信息" class="headerlink" title="输出信息"></a>输出信息</h4><ul>
 <li>进度条: 显示声音获取进度或者重播进度。</li>
 <li>总结栏: 测试前显示待测金银币相关信息，测试后显示结果。</li>
 <li>声音柱状图: 显示采集到的声音信息。</li>
+</ul>
+<h3 id="数据库界面"><a href="#数据库界面" class="headerlink" title="数据库界面"></a>数据库界面</h3><h4 id="用户输入-1"><a href="#用户输入-1" class="headerlink" title="用户输入"></a>用户输入</h4><ul>
+<li>年份: 金银币铸造年份</li>
+<li>关键词: 通过关键词搜索（目前仅支持英文）</li>
+<li>其它: 选择硬币种类和发行区域*</li>
+</ul>
+<p>*区域划分依据<a href="https://zh.wikipedia.org/wiki/%E8%81%94%E5%90%88%E5%9B%BD%E5%9C%B0%E7%90%86%E5%8C%BA%E5%88%92%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">联合国地理区划列表</a></p>
+<h4 id="用户操作-1"><a href="#用户操作-1" class="headerlink" title="用户操作"></a>用户操作</h4><ul>
+<li><p>每次有新的输入信息，如果结果列表包含的金银币个数:</p>
+<ul>
+<li>0 - 50 枚: 直接显示结果，</li>
+<li>51 - 500 枚: 点击 🔍 后显示结果，</li>
+<li>&gt; 500 枚: 结果过多，需要细化查询后显示结果。</li>
+</ul>
+</li>
+<li><p>双击一个硬币条目以确认选择，返回测试界面。</p>
+</li>
+<li><p>单击“ℹ️”按钮可以访问<a href="https://en.numista.com/" target="_blank" rel="noopener">Numista官网</a>获得更多金银币信息。</p>
+</li>
 </ul>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ol>
 <li>打开应用，输入金银币的名义贵金属含量，重量和直径。</li>
@@ -385,7 +404,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这是啥"><span class="nav-number">1.</span> <span class="nav-text">这是啥?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何用"><span class="nav-number">2.</span> <span class="nav-text">如何用?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#界面介绍"><span class="nav-number">2.1.</span> <span class="nav-text">界面介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户输入"><span class="nav-number">2.1.1.</span> <span class="nav-text">用户输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户操作"><span class="nav-number">2.1.2.</span> <span class="nav-text">用户操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出信息"><span class="nav-number">2.1.3.</span> <span class="nav-text">输出信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.2.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读懂结果"><span class="nav-number">2.3.</span> <span class="nav-text">读懂结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重复最后一次测试"><span class="nav-number">2.4.</span> <span class="nav-text">重复最后一次测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#没有金银币怎么办？"><span class="nav-number">2.5.</span> <span class="nav-text">没有金银币怎么办？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理"><span class="nav-number">3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#免责声明"><span class="nav-number">4.</span> <span class="nav-text">免责声明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这是啥"><span class="nav-number">1.</span> <span class="nav-text">这是啥?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何用"><span class="nav-number">2.</span> <span class="nav-text">如何用?</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#界面介绍"><span class="nav-number">2.1.</span> <span class="nav-text">界面介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试界面"><span class="nav-number">2.1.1.</span> <span class="nav-text">测试界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用户输入"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">用户输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户操作"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">用户操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出信息"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">输出信息</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库界面"><span class="nav-number">2.1.2.</span> <span class="nav-text">数据库界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用户输入-1"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">用户输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户操作-1"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">用户操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.2.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读懂结果"><span class="nav-number">2.3.</span> <span class="nav-text">读懂结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重复最后一次测试"><span class="nav-number">2.4.</span> <span class="nav-text">重复最后一次测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#没有金银币怎么办？"><span class="nav-number">2.5.</span> <span class="nav-text">没有金银币怎么办？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理"><span class="nav-number">3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#免责声明"><span class="nav-number">4.</span> <span class="nav-text">免责声明</span></a></li></ol></div>
             
 
           </div>
