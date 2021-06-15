@@ -67,7 +67,7 @@
 <meta property="og:image" content="https://yoursite.com/images/apple-store-badge.svg">
 <meta property="og:image" content="https://yoursite.com/images/google-play-badge.png">
 <meta property="og:image" content="https://yoursite.com/images/interface_cn.png">
-<meta property="og:updated_time" content="2021-06-14T08:50:59.118Z">
+<meta property="og:updated_time" content="2021-06-15T20:57:41.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="金银币测试">
 <meta name="twitter:description" content="这是啥?金银币测试 是一款免费的应用程序，可以用来检测假的金银币。用户只需要用一个坚硬的物体（例如另一枚硬币，钥匙，等）轻轻的敲击待测硬币，就可以知道检测结果。该应用仅限于：  检测圆形无孔的金银币。 检测金银币中的金银含量：该应用无法区别真品和一枚金银含量与之相近的赝品。 金币含金量至少为7%，银币含银量至少为20%；当含金量&amp;lt;20%或含银量&amp;lt;50%时，结果可能不准确。  如何用?">
@@ -262,8 +262,8 @@
 
 <h3 id="测试界面"><a href="#测试界面" class="headerlink" title="测试界面"></a>测试界面</h3><h4 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h4><ul>
 <li>含量（%）: 金银币的金含量或银含量。</li>
-<li>重量（克）: 金银币的重量（克），通常可用名义重量代替。</li>
-<li>直径（毫米）: 金银币的直径（毫米），通常使用名义直径。</li>
+<li>重量（克）: 金银币的实际重量（克），也可用名义重量代替。</li>
+<li>直径（毫米）: 金银币的实际直径（毫米）。名义直径可能会有较大的误差（&gt;0.5mm）。</li>
 </ul>
 <h4 id="用户操作"><a href="#用户操作" class="headerlink" title="用户操作"></a>用户操作</h4><ul>
 <li>检测: 开始一个新的测试。</li>
@@ -302,7 +302,7 @@
 <li>一直重复<strong>第5步</strong>，直到进度条走完。</li>
 </ol>
 <p>请观看<a href="..">样例</a>.</p>
-<h2 id="读懂结果"><a href="#读懂结果" class="headerlink" title="读懂结果"></a>读懂结果</h2><p>应用通过三颗星来表示金银币的检测结果:<br>(3/3): 金银币通过测试: 金银含量与名义含量相似。<br>(2/3): 金银币通过测试: 声音听上去没有(3/3)的好。<br>(1/3): 金银币貌似通过测试: 金银含量很可能和其名义含量有差距，或者是因为实际的尺寸和重量与名义值有差距。<br>(0/3): 金银币未通过测试。</p>
+<h2 id="读懂结果"><a href="#读懂结果" class="headerlink" title="读懂结果"></a>读懂结果</h2><p>应用通过三颗星来表示金银币的检测结果:<br>(3/3): 金银币通过测试: 金银含量与名义含量几乎一样（仅限于从数据库中选择的金银币）。<br>(2/3): 金银币通过测试: 金银含量与名义含量相近。<br>(1/3): 金银币貌似通过测试: 金银含量很可能和其名义含量有差距，或者是因为实际的尺寸和重量与名义值有差距。<br>(0/3): 金银币未通过测试。</p>
 <p><em>结果不稳定</em>: 因为采集的声音质量比较差，所得结果未必可信，建议重新测试。</p>
 <h2 id="重复最后一次测试"><a href="#重复最后一次测试" class="headerlink" title="重复最后一次测试"></a>重复最后一次测试</h2><p>用户可以点击<em>重播</em>按钮重复最后一次测试</p>
 <h2 id="没有金银币怎么办？"><a href="#没有金银币怎么办？" class="headerlink" title="没有金银币怎么办？"></a>没有金银币怎么办？</h2><p>有视频也可以！<br>比如说在这个视频中 <a href="https://youtu.be/enBD3GsIaJU" target="_blank" rel="noopener">https://youtu.be/enBD3GsIaJU</a><br>[1:47] 正品美国银鹰洋: 在app中获得3星<br>[1:59] 赝品美国银鹰洋: 在app中获得0星，不稳定结果<br>[6:52] 正品美国金鹰洋50刀(通过图片估计): 在app中获得2星<br>由于通常情况下视频中的声音并没有实际测试的声音质量好，所以不稳定结果出现的频率可能会很高。<br><a href="./moretests.html">这里</a>有更多例子</p>
