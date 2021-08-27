@@ -1529,7 +1529,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff574;
+  background: #df5e4f;
 }
 .feed-link,
 .chat {
@@ -2304,4 +2304,19 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.mycolumn {
+  float: left;
+  width: 22%;
+  padding: 5px;
+}
+.mynarrowcolumn {
+  float: left;
+  width: 15%;
+  padding: 5px;
+}
+.myrow::after {
+  content: "";
+  clear: both;
+  display: table;
 }
