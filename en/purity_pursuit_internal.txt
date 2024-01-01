@@ -1,0 +1,68 @@
+# Purity Pursuit: The Three-Star Quest Campaign Manual
+
+## Introduction
+Welcome to the "Purity Pursuit: The Three-Star Quest" campaign! This initiative is designed to enhance the accuracy of our gold and silver coin testing application. As a senior staff member in the company, you'll play a crucial role in managing and executing various aspects of this campaign. This manual will guide you through each step of the process.
+
+## Objective
+The primary goal is to identify and confirm any false positives among 3-star results provided by our app. A 3-star result is assumed to be highly accurate, indicating a high purity level for tested coins. This campaign seeks to validate this accuracy or uncover any discrepancies.
+
+## Campaign Overview
+- **Name**: "Purity Pursuit: The Three-Star Quest"
+- **Duration**: 6 months (or end earlier if a false positive is confirmed and rewarded)
+- **Target Audience**: All subscribers of the application
+- **Reward**: $30 (minus bank transfer fees) for the first user who successfully identifies a 3-star false positive. It is a one-time reward regardless of the number of false positives reported. An anonymous reward can be used upon the user's request.
+
+## Participant's Process
+1. **Identification of Suspicious 3-Star Result**: While testing their gold or silver coins using our app, users suspect a 3-star result is a false positive.
+2. **Self-Verification**: Users double-check to ensure that the 3-star result is not due to misuse of the application or background noise.
+3. **Reporting**: If all self-verification is done, and users still receive a suspicious 3-star result, they report it through the app using the "Report last test" feature.
+4. **Remote Verification**: If required, the user must submit a video of the testing process, including weight and size measurements.
+5. **Coin Mailing**: If required, users send the suspected coin to our office by tracked parcel/letter for further verification.
+6. **Assay Analysis**: We request an assay office for detailed composition analysis (with potentiometric titration method).
+
+### Self-Verification Steps:
+1. The coin's weight and size are correct: the coin's weight is +/- 5% of its nominal weight, and the diameter is +/- 0.5 mm of its nominal size.
+2. The coin is well pinged during the test.
+3. The test is noise-free: if a user launches a test without pinging anything, the app should not give 3-star results.
+
+## Important
+- The detailed composition analysis by the assay office is a destructive process. Therefore, the mailed coin will become the asset of our company and will not be returned to the user.
+- The postage fee is the responsibility of the participant. In case the user wins the reward, a $10 postage fee will be reimbursed to the winner regardless of the actual postage fees.
+- For the sake of transparency of the campaign, we will publicly communicate one of the following pieces of information according to the winner's choice:
+    - The first letter and last letter of the winner's email. (e.g., p\*\*\*r@g\*\*\*l.com for preciouscointester@gmail.com)
+    - The winner's region (North America, South Europe, etc.)
+    - The winner's initials (e.g., JS for James Smith).
+- If the parcel is unable to arrive at our company (lost, border checks, etc.), the user does not win the campaign since we cannot verify if the coin is a real false positive. Please consider insurance to cover the potential loss.
+
+## Your Responsibilities
+- **Campaign Promotion**: Assist in creating and disseminating promotional materials for the campaign.
+- **User Communication**: Respond to user inquiries about the campaign. Provide clear instructions for participation.
+- **Initial Screening**: Perform a preliminary review of user submissions to filter out obvious non-qualifiers.
+- **Verification Support**: Assist in verifying user submissions, including analyzing videos and coordinating with the assay office.
+- **Data Recording**: Maintain accurate records of all submissions, communication, and verification results.
+- **Reward Processing**: Assist in processing rewards for successful participants, ensuring compliance with the defined criteria.
+
+## Verification Criteria
+A 3-star false positive is confirmed if:
+1. The app consistently gives 3-star results in a noise-free environment.
+2. The coin's weight and size are within specified tolerances.
+3. An in-app report with a timestamp is provided.
+4. Video evidence supports the claim.
+5. The assay office analysis confirms a discrepancy in metal content:
+   - For silver coins: silver content is less than 10% of its nominal value.
+   - For gold coins: gold content is less than 5% of its nominal value.
+
+## Privacy and Data Protection
+- The packaging or envelope will be destroyed after we retrieve the coin. The physical address on the parcel will not be retained.
+- The participant's video is only kept locally in the company and won't be publicly available.
+- The participant's full email address remains on email servers (e.g., Gmail, Hotmail) and won't be publicly communicated.
+- The test ID of the report will be publicly communicated.
+
+## Ethics and Transparency
+All reported & processed tests should be recorded. A reason should be provided if the participant does not win the campaign. This information will be published publicly online with the following details: test ID, test time, report time, reason.
+
+## Closing the Campaign
+Assist in compiling a final report, summarizing the findings, successes, and areas for improvement. Participate in the post-campaign review to discuss lessons learned and potential application improvements.
+
+## Feedback & Concerns
+For any questions, feedback, or concerns about the campaign, please reach us at preciouscointester@gmail.com.
