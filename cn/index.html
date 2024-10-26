@@ -67,7 +67,7 @@
 <meta property="og:image" content="https://yoursite.com/images/apple-store-badge.svg">
 <meta property="og:image" content="https://yoursite.com/images/google-play-badge.png">
 <meta property="og:image" content="https://yoursite.com/images/apk-badge.png">
-<meta property="og:updated_time" content="2024-01-26T19:28:01.599Z">
+<meta property="og:updated_time" content="2024-10-26T07:18:20.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="金银币测试">
 <meta name="twitter:description" content="如何知道一枚金币是不是金子做的？怎么才能鉴定假银币？   金银币测试可以帮助您！ 这是啥?金银币测试 是一款免费下载的应用程序，可以用来检测假的金银币。用户只需要用一个坚硬的物体（例如另一枚硬币，钥匙，等）轻轻的敲击待测硬币，就可以知道检测结果">
@@ -288,21 +288,20 @@
 <p>请观看<a href="..">样例</a>或<a href="./best_practices.html">常见错误与最佳实践</a>。</p>
 <h3 id="读懂结果"><a href="#读懂结果" class="headerlink" title="读懂结果"></a>读懂结果</h3><p>应用通过三颗星来表示金银币的检测结果:</p>
 <ul>
-<li>⭐⭐⭐ 3/3: 金银币通过测试: 金银含量与名义含量<strong>几乎一样</strong><sup>(1)</sup>（仅限于从数据库中选择的金银币）。</li>
-<li>⭐⭐   2/3: 金银币通过测试: 金银含量与名义含量相近。</li>
+<li>⭐⭐⭐ 3/3: 金银币通过测试（仅限于部分从数据库中选择的金银币）：<ul>
+<li>银币的预期含银量不低于名义值的10%（1.4.0版本或以上）。</li>
+<li>金币的预期含金量不低于名义值的5%（1.4.0版本或以上）。</li>
+</ul>
+</li>
+<li>⭐⭐   2/3: 金银币通过测试: 声音与真币相符，金银含量与名义含量相近。</li>
 <li>⭐     1/3: 金银币很可能未通过测试: 金银含量很可能和其名义含量有差距，或者是因为实际的尺寸和重量与名义值有差距。</li>
 <li>0/3: 金银币未通过测试。</li>
 </ul>
 <p><em>结果不稳定</em>: 因为采集的声音质量比较差，所得结果未必可信，建议重新测试。</p>
-<p><sup>(1)</sup> 对于应用版本等于或高于1.4.0的情况下，3星级别的结果（⭐⭐⭐ 3/3）表示：</p>
-<ul>
-<li>银币的预期含银量不低于名义值的10%。</li>
-<li>金币的预期含金量不低于名义值的5%。</li>
-</ul>
+<p>🔥 发现错误结果？您有机会参加我们的活动赢取<strong>100美元</strong>奖励。<a href="./3_star_quest/round2/3_star_quest.html">点击这里</a>查看详情。</p>
 <p>2到3星的结果是良好的，表示该硬币已经成功通过了测试。相反，0到1星的结果是不好的，意味着该硬币未能通过测试或需要更多验证。所有提供的结果均基于我们对这些金银币的最佳了解。请注意，这些结果<strong>仅供信息参考</strong>，不附带任何保证或担保。</p>
-<p>🔥 通过参与我们的活动，您可能有资格赢得30美元奖励。<a href="./3_star_quest.html">点击此处</a>了解详情。</p>
 <h3 id="为什么测试没有通过？"><a href="#为什么测试没有通过？" class="headerlink" title="为什么测试没有通过？"></a>为什么测试没有通过？</h3><p>测试没有通过？我们来看看可能是什么原因导致的：</p>
-<p>有可能这是一个错误的结果（false negative)，主要原因有三点：</p>
+<p>有可能这是一个错误的结果（false negative），主要原因有三点：</p>
 <ol>
 <li>输入了不准确的测试参数：这种情况比较常见于使用自定义金银币，或者数据库中不带<strong>参数被核准(✔️)</strong>的金银币。请您再次测量金银币的直径和重量。</li>
 <li>敲击过于频繁：app可能会把过于频繁的敲击当作背景噪声，从而得到错误的结果。</li>
