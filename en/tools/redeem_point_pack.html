@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Precious Coin Tester">
 <meta property="og:description" content="Query/Redeem Point Pack   #apiForm table {     width: 100%;     border-collapse: collapse;   }   #apiForm td, #apiForm th {     border: 1px solid #ddd;     padding: 8px;   }   #apiForm tr:nth-child(ev">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2025-01-05T20:51:52.335Z">
+<meta property="og:updated_time" content="2025-01-05T21:31:00.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Precious Coin Tester">
 <meta name="twitter:description" content="Query/Redeem Point Pack   #apiForm table {     width: 100%;     border-collapse: collapse;   }   #apiForm td, #apiForm th {     border: 1px solid #ddd;     padding: 8px;   }   #apiForm tr:nth-child(ev">
@@ -424,11 +424,12 @@ async function performQuery() {
     });
 
     if (!response.ok) {
-      throw new Error(`Server responded with status ${response.status}`);
+      const errorText = await response.text();
+      throw new Error(`Server responded with status ${response.status}: ${errorText}`);
     }
 
     const data = await response.json();
-    displayMessage(JSON.stringify(data), false);
+    displayMessage(data.message || 'Success', false);
   } catch (error) {
     displayMessage('Error: ' + error.message);
   }
@@ -460,11 +461,12 @@ async function performRedeem() {
     });
 
     if (!response.ok) {
-      throw new Error(`Server responded with status ${response.status}`);
+      const errorText = await response.text();
+      throw new Error(`Server responded with status ${response.status}: ${errorText}`);
     }
 
     const data = await response.json();
-    displayMessage(JSON.stringify(data), false);
+    displayMessage(data.message || 'Success', false);
   } catch (error) {
     displayMessage('Error: ' + error.message);
   }
