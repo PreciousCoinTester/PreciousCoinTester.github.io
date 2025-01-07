@@ -57,17 +57,20 @@
   };
 </script>
 
-  <meta name="description" content="Query/Redeem Point Pack   #apiForm table {     width: 100%;     border-collapse: collapse;   }   #apiForm td, #apiForm th {     border: 1px solid #ddd;     padding: 8px;   }   #apiForm tr:nth-child(ev">
+  <meta name="description" content="Query/Redeem Point Pack1. Note your Pack Code  Note the Pack Code in red circle: 3ED3D658-XXXX-XXXX-XXXX-771D4B5BE461-100 (X is masking the real letters). 2. Find your account ID in app  Note the acco">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Precious Coin Tester">
 <meta property="og:url" content="https://yoursite.com/en/tools/redeem_point_pack.html">
 <meta property="og:site_name" content="Precious Coin Tester">
-<meta property="og:description" content="Query/Redeem Point Pack   #apiForm table {     width: 100%;     border-collapse: collapse;   }   #apiForm td, #apiForm th {     border: 1px solid #ddd;     padding: 8px;   }   #apiForm tr:nth-child(ev">
+<meta property="og:description" content="Query/Redeem Point Pack1. Note your Pack Code  Note the Pack Code in red circle: 3ED3D658-XXXX-XXXX-XXXX-771D4B5BE461-100 (X is masking the real letters). 2. Find your account ID in app  Note the acco">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2025-01-05T21:31:00.011Z">
+<meta property="og:image" content="https://yoursite.com/images/pack_code.png">
+<meta property="og:image" content="https://yoursite.com/images/point_before_redemption.png">
+<meta property="og:updated_time" content="2025-01-07T21:33:38.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Precious Coin Tester">
-<meta name="twitter:description" content="Query/Redeem Point Pack   #apiForm table {     width: 100%;     border-collapse: collapse;   }   #apiForm td, #apiForm th {     border: 1px solid #ddd;     padding: 8px;   }   #apiForm tr:nth-child(ev">
+<meta name="twitter:description" content="Query/Redeem Point Pack1. Note your Pack Code  Note the Pack Code in red circle: 3ED3D658-XXXX-XXXX-XXXX-771D4B5BE461-100 (X is masking the real letters). 2. Find your account ID in app  Note the acco">
+<meta name="twitter:image" content="https://yoursite.com/images/pack_code.png">
   <link rel="canonical" href="https://yoursite.com/en/tools/redeem_point_pack">
 
 
@@ -285,7 +288,14 @@
       
       <div class="post-body">
         
-          <h1 id="Query-Redeem-Point-Pack"><a href="#Query-Redeem-Point-Pack" class="headerlink" title="Query/Redeem Point Pack"></a>Query/Redeem Point Pack</h1><style>
+          <h1 id="Query-Redeem-Point-Pack"><a href="#Query-Redeem-Point-Pack" class="headerlink" title="Query/Redeem Point Pack"></a>Query/Redeem Point Pack</h1><h2 id="1-Note-your-Pack-Code"><a href="#1-Note-your-Pack-Code" class="headerlink" title="1. Note your Pack Code"></a>1. Note your <em>Pack Code</em></h2><img src="/images/pack_code.png" width="500px">
+
+<p>Note the <em>Pack Code</em> in red circle: <strong>3ED3D658-XXXX-XXXX-XXXX-771D4B5BE461-100</strong> (X is masking the real letters).</p>
+<h2 id="2-Find-your-account-ID-in-app"><a href="#2-Find-your-account-ID-in-app" class="headerlink" title="2. Find your account ID in app"></a>2. Find your account ID in app</h2><img src="/images/point_before_redemption.png" width="200px">
+
+<p>Note the account ID in red circle: <strong>1000X</strong> (⚠️ You should use your own account ID ⚠️)</p>
+<h2 id="3-Query-the-pack"><a href="#3-Query-the-pack" class="headerlink" title="3. Query the pack"></a>3. Query the pack</h2><p>Put the <em>Pack Code</em> from Step 1 in the box below, and click <strong>Query</strong> button.</p>
+<style>
   #apiForm table {
     width: 100%;
     border-collapse: collapse;
@@ -329,23 +339,32 @@
   }
 </style>
 
-
 <div id="apiForm">
   <table>
     <tr>
       <td>Pack:</td>
       <td><input type="text" id="packId" placeholder="Enter Pack: XXXXXXXX-XXXX-..."></td>
     </tr>
+  </table>
+  <div>
+    <button type="button" onclick="performQuery()">Query</button>
+  </div>
+  <div id="queryMessage">Query result: nothing happened yet</div>
+</div>
+
+
+<h2 id="4-Redeem-the-pack"><a href="#4-Redeem-the-pack" class="headerlink" title="4. Redeem the pack"></a>4. Redeem the pack</h2><p>Leave the previous box unchanged. Copy the <em>Account ID</em> from Step 2 in the box below, and click <strong>Redeem</strong> button.</p>
+<div id="apiForm">
+  <table>
     <tr>
       <td>Account ID:</td>
       <td><input type="text" id="publicId" placeholder="ID is only needed for redemption"></td>
     </tr>
   </table>
   <div>
-    <button type="button" onclick="performQuery()">Query</button>
     <button type="button" onclick="performRedeem()">Redeem</button>
   </div>
-  <div id="resultMessage">Result:</div>
+  <div id="redeemMessage">Redeem result: nothing happened yet</div>
 </div>
 
 <script>
@@ -380,8 +399,8 @@ function validatePublicId(s) {
 }
 
 // Common function to display messages
-function displayMessage(message, isError = true) {
-  const resultMessage = document.getElementById('resultMessage');
+function displayMessage(field, message, isError = true) {
+  const resultMessage = document.getElementById(field);
   resultMessage.innerText = message;
   resultMessage.style.color = isError ? 'red' : 'green';
 }
@@ -389,7 +408,6 @@ function displayMessage(message, isError = true) {
 // Function to validate Pack ID (starts with UUID)
 function isValidPackId(packId) {
   if (!validatePackId(packId)) {
-    displayMessage('Error: packId must start with a valid uppercase UUID.');
     return false;
   }
   return true;
@@ -398,7 +416,6 @@ function isValidPackId(packId) {
 // Function to validate Public ID using checksum
 function isValidPublicId(publicId) {
   if (!validatePublicId(publicId)) {
-    displayMessage('Error: publicId failed integrity check.');
     return false;
   }
   return true;
@@ -410,7 +427,7 @@ async function performQuery() {
 
   // Validate packId only
   if (!isValidPackId(packId)) {
-    displayMessage('Error: wrong pack id format');
+    displayMessage('queryMessage', 'Error: wrong pack id format');
     return; // Abort the function if validation fails
   }
 
@@ -429,9 +446,9 @@ async function performQuery() {
     }
 
     const data = await response.json();
-    displayMessage(data.message || 'Success', false);
+    displayMessage('queryMessage', data.message || 'Success', false);
   } catch (error) {
-    displayMessage('Error: ' + error.message);
+    displayMessage('queryMessage', 'Error: ' + error.message);
   }
 }
 
@@ -442,12 +459,12 @@ async function performRedeem() {
 
   // Validate packId and publicId
   if (!isValidPackId(packId)) {
-    displayMessage('Error: wrong pack id format');
+    displayMessage('redeemMessage', 'Error: wrong pack id format');
     return; // Abort the function if packId validation fails
   }
 
   if (!isValidPublicId(publicId)) {
-    displayMessage('Error: wrong public id');
+    displayMessage('redeemMessage', 'Error: wrong public id');
     return; // Abort the function if publicId validation fails
   }
 
@@ -466,9 +483,9 @@ async function performRedeem() {
     }
 
     const data = await response.json();
-    displayMessage(data.message || 'Success', false);
+    displayMessage('redeemMessage', data.message || 'Success', false);
   } catch (error) {
-    displayMessage('Error: ' + error.message);
+    displayMessage('redeemMessage', 'Error: ' + error.message);
   }
 }
 
@@ -620,7 +637,7 @@ async function performRedeem() {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Query-Redeem-Point-Pack"><span class="nav-number">1.</span> <span class="nav-text">Query/Redeem Point Pack</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Query-Redeem-Point-Pack"><span class="nav-number">1.</span> <span class="nav-text">Query/Redeem Point Pack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Note-your-Pack-Code"><span class="nav-number">1.1.</span> <span class="nav-text">1. Note your Pack Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Find-your-account-ID-in-app"><span class="nav-number">1.2.</span> <span class="nav-text">2. Find your account ID in app</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Query-the-pack"><span class="nav-number">1.3.</span> <span class="nav-text">3. Query the pack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Redeem-the-pack"><span class="nav-number">1.4.</span> <span class="nav-text">4. Redeem the pack</span></a></li></ol></li></ol></div>
             
 
           </div>
